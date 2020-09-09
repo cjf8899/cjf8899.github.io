@@ -1,6 +1,6 @@
-# Khyeyoon.github.io
+# cjf8899.github.io
 
-> https://khyeyoon.github.io/categories/
+> https://cjf8899.github.io/categories/
 
 ## paper review
 

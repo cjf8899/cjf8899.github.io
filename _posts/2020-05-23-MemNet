@@ -1,0 +1,127 @@
+---
+title:  "MemNet paper review"
+last_modified_at: 2020-05-23 08:26:28-04:00
+categories: 
+  - Single Image Super-Resolution
+  - "2017"
+tags:
+  - update
+toc: true
+toc_label: "Getting Started"
+---
+
+# MemNet: A Persistent Memory Network for Image Restoration
+> Tai, Ying, et al. "Memnet: A persistent memory network for image restoration." Proceedings of the IEEE international conference on computer vision. 2017.
+
+**Abstract**
+
+* very deep persistent memory network 제안
+ > memory block : recursive unit, gate unit으로 구성
+
+>1) Recursive unit
+>  > 다른 receptive field에서 현재 state의 multi-level representation 학습 
+  
+>2) Gate unit
+>  > 이전 state를 얼마나 가져갈지 control하고, 현재 state를 얼마나 저장할지 결정 
+  
+* MemNet을 image denosing. super-resolution, JPEG deblocking에 적용시켰으며, the state-of-the-arts 달성
+
+**Introduction**
+
+* 기존 연구
+>1) 일반적인 CNN 구조(VDSR,DRCN,DnCNN) : single path feed-forward 구조
+>> short-term memory
+>2) some variants of CNN(RED,ResNet) : skip-connection 사용
+>> restricted long-term memory
+
+> -기존의 model은 persistent memory를 갖지 못함(long-term memory 부족)
+.
+* very deep persistent memory network(MemNet) 제안
+>1)Feature Extraction Net(FENet)
+
+>2)Several memory blocks : densely connected structure
+
+>3)Reconstruction Net(ReconNet)
+
+* memory block은 recursive unit과 gate unit으로 이루어짐
+> recursive unit에서 생성된 short-term memory와 이전 memory block에서 나온 long-term memory가 gate unit으로 들어가 concatenation
+
+<img src="/assets/img/_MemNet/memory_block.PNG" width="40%" height="30%" title="70px" alt="memoryblock"></img>
+
+* extended multi-supervised MemNet
+> memory block의 모든 중간 prediction을 융합하여 성능 향상
+
+<img src="/assets/img/_MemNet/multi-supervised_MemNet.PNG" width="40%" height="30%" title="100px" alt="memoryblock"></img>
+
+* The main contributions
+>1)memory block을 통한 gating mechanism으로 long-term memory 활용
+
+>2)densely connected structure로 mid/high-frequency signal을 얻는 것을 돕고 maximum information flow를 보장
+
+>3)the state-of-the-art in image denoising, super-resolution, JPEG deblocking
+
+**Basic Network Architecture**
+
+<img src="/assets/img/_MemNet/basic_MemNet.PNG" width="40%" height="30%" title="100px" alt="memoryblock"></img>
+
+1) FENet : a feature extraction net
+>하나의 convolution layer가 사용되며, noisy or blurry input image로부터 features 추출
+
+2) multiple stacked memory blocks
+>M개의 memory block으로 이루어져 있고, feature mapping 수행
+
+3) ReconNet : a reconstruction net
+>하나의 convolution layer를 사용하여 the residual image를 reconstruction
+
+* Loss function : MSE
+
+<img src="/assets/img/_MemNet/loss.PNG" width="40%" height="30%" title="100px" alt="memoryblock"></img>
+
+
+**Memory Block**
+
+* Recursive Unit
+
+>- a residual building block (ResNet)
+
+>- 각 residual function은 pre-activation function(ReLU)을 갖는 2 개의 convolution layer로 구성
+
+>- 다른 receptive field에서 multi-level representations을 생성하기 위해 여러번의 recursion을 수행
+
+>- short-term memory : 하나의 memory block 내의 recursinons의 memory
+
+>- long-term memory : 이전의 memory blocks에서 나온 memory
+
+* Gate Unit
+
+>- 하나의 1x1 convolution layer를 사용하여 gating mechanism을 수행하며 다른 memory로부터의 weight 값을 adaptive하게 학습
+
+>- long-term memory에 대한 weight는 이전 states를 얼마나 저장해야 하는지 control하고 short-term memory에 대한 weight는 현재 state를 얼마나 저장할지 결정
+
+**Multi-Supervised MemNet**
+
+* 모든 memory block의 output을 reconstruction net으로 보내고, 이를 모두 활용한 weighted averaging을 통해 이미지 복원(ensemble)
+
+* Loss function
+
+<img src="/assets/img/_MemNet/multi-supervisedloss.PNG" width="40%" height="30%" title="100px" alt="memoryblock"></img>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

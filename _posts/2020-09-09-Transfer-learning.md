@@ -30,7 +30,9 @@ transfer learning이란
 ![initial](https://user-images.githubusercontent.com/53032349/92392893-f1d6f000-f159-11ea-9643-37cf812634e6.png)
 
 그림에서 보듯이  Generality 레이어에서는 Gabor filters, color blobs 와 같은 것들이 학습된다.
+
 ![initial](https://user-images.githubusercontent.com/53032349/92392920-fe5b4880-f159-11ea-81e8-c3a899b1fd8a.png)
+
 ### Gabor filters
 
 ![initial](https://user-images.githubusercontent.com/53032349/92392948-0adfa100-f15a-11ea-8c0b-56961b00c5c6.png)

@@ -46,7 +46,9 @@ transfer learning이란
 
 ● transferred layers는 frozen시키거나 fine-tuned시키는 실험이다. fine-tuned을 사용한 것은 (+)가 쓰여져 있는 것이다.
 
-![initial](https://user-images.githubusercontent.com/53032349/92392981-192dbd00-f15a-11ea-8bcc-b356e2e57fc7.png)
+<img src="https://user-images.githubusercontent.com/53032349/92392981-192dbd00-f15a-11ea-8bcc-b356e2e57fc7.png" width="100%" height="100%" title="70px" alt="memoryblock">
+
+
 
 그림에서 보듯이 baseA 와 baseB는 transfer없이 학습을 시킨 것이고 BnB, AnB는 각각 B에서 학습시킨 파라미터를 B에 적용, A에서 학습시킨 파라미터를 B에 적용한다는 의미이다. (+)가 붙은 경우들은 fine-tuned을 시킨경우들이다. (기본적으로 transferred layers들은 frozen 시킴) 
 transfer시키는 레이어의 범위는 1번째 레이어 에서부터 마지막 8번째 레이어 까지 각각 실험하여서 어디까지 General 한지보고, 또한 fine-tuning 하였을 때 성능의 변화가 있는지 보는 실험이다.

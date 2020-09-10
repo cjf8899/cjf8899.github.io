@@ -10,16 +10,4 @@
 
 ### Segmentation
 
-### Object detection
-
-### Text detection/Text recognition
-
-### Face detection/Face recognition
-
-### Video Super-Resolution/Video deblurring
-
-### Video decaptioning
-
-### Video Inpainting
-
 ### ...

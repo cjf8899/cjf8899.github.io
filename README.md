@@ -6,6 +6,10 @@
 
 **Posts by Category**
 
+### Image recognition
+
+### Segmentation
+
 ### Object detection
 
 ### Text detection/Text recognition

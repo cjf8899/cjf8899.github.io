@@ -10,7 +10,7 @@ toc_label: "Getting Started"
 ---
 
 # How transferable are features in deep neuralnetworks?
-> Jason Yosinski, et al. "How transferable are features in deep neuralnetworks?". 2014.
+> Jason Yosinski, et al. ["How transferable are features in deep neuralnetworks?"](https://arxiv.org/abs/1411.1792). 2014.
 
 # Transfer learning 리뷰
 

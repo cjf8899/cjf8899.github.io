@@ -15,3 +15,4 @@ toc_label: "Getting Started"
 # KeepAugment: A Simple Information-Preserving Data Augmentation Approach
 
 
+https://docs.google.com/document/d/1kThcmLO7vWolRrGUh1CZDxLdqqmGna1B5B6LEOBrkR4/edit?usp=sharing

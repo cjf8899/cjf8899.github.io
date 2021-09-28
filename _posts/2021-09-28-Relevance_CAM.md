@@ -14,5 +14,7 @@ toc_label: "Getting Started"
 
 # Relevance-CAM: Your Model Already Knows Where to Look
 
+https://docs.google.com/document/d/1Xce9u2H5-nQSRdZHdJDSbPVIgNI68o-H5BncYfADXtM/edit?usp=sharing
+
 
 

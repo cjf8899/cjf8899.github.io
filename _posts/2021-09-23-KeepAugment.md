@@ -2,7 +2,7 @@
 title:  "KeepAugment: A Simple Information-Preserving Data Augmentation Approach"
 last_modified_at: 2021-09-23 00:00:00 -0400
 categories: 
-  - Data augmentation
+  - Data Augmentation
 tags:
   - update
 toc: true

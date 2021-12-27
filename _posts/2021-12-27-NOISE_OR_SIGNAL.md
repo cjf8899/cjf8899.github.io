@@ -2,7 +2,7 @@
 title:  "NOISE OR SIGNAL: THE ROLE OF IMAGE BACKGROUNDS IN OBJECT RECOGNITION"
 last_modified_at: 2021-12-27 00:00:00 -0400
 categories: 
-  - Data augmentation
+  - Data Augmentation
 tags:
   - update
 toc: true
